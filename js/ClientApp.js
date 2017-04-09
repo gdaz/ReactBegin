@@ -1,18 +1,20 @@
 import React from 'react'
 import {render} from 'react-dom'
-import {HashRouter, Route} from 'react-router-dom'
+import {BrowserRouter, Route} from 'react-router-dom'
 import Landing from './Landing'
+import Search from './Search'
 import '../public/normalize.css'
 import '../public/style.css'
 
 const App = React.createClass({
   render () {
     return (
-      <div className='app'>
-        <HashRouter>
+      <BrowserRouter>
+        <div className='app'>
           <Route exact path='/' component={Landing} />
-        </HashRouter>
-      </div>
+          <Route path='/search' component={Search} />
+        </div>
+      </BrowserRouter>
     )
   }
 })

@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 const Landing = React.createClass({
   render () {
@@ -6,7 +7,7 @@ const Landing = React.createClass({
       <div className='landing'>
         <h1>svideo</h1>
         <input type='text' placeholder='Search' />
-        <a>or Browser All</a>
+        <Link to='/search'>or Browser All</Link>
       </div>
     )
   }
