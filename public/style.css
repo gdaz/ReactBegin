@@ -162,7 +162,7 @@ pre {
 
 header {
   z-index: 10;
-  /*position: fixed;
+  position: fixed;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -172,7 +172,7 @@ header {
   width: 100%;
   overflow: hidden;
   background-color: #fafafa;
-  padding: 8px 30px;*/
+  padding: 8px 30px;
 }
 
 header > h1 {
