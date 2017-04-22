@@ -8,16 +8,19 @@ class Header extends React.Component {
       utilSpace = <input value={this.props.searchTerm} onChange={this.props.hadleSearchTermChange} type='text'
         placeholder='Search' />
     } else {
-      utilSpace = (<h2><Link to='/Search'>
-      Back
-      </Link></h2>
+      utilSpace = (
+        <h2>
+          <Link to='/Search'>
+            Back
+          </Link>
+        </h2>
       )
     }
-    return ( 
+    return (
       <header>
         <h1>
           <Link to='/'>
-            <h1>svideo</h1>
+            svideo
           </Link>
         </h1>
         {utilSpace}

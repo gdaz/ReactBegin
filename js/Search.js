@@ -1,5 +1,6 @@
 import React from 'react'
 import ShowCard from './ShowCard'
+import Header from './Header'
 
 const {string, arrayOf, shape} = React.PropTypes
 
@@ -15,16 +16,17 @@ const Search = React.createClass({
       msgSearch: ''
     }
   },
-  handleSearchState (event) {
+  hadleSearchTermChange (event) {
     this.setState({msgSearch: event.target.value})
   },
   render () {
     return (
       <div className='search'>
-        <header>
-          <h1>{this.state.msgSearch}</h1>
-          <input value={this.state.msgSearch} onChange={this.handleSearchState} type='text' placeholder='Search' />
-        </header>
+        <Header
+          showSearch
+          searchTerm={this.state.msgSearch}
+          hadleSearchTermChange={this.hadleSearchTermChange}
+        />
         <div>
           {this.props.shows
           .filter((show) => {
